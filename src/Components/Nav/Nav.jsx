@@ -5,10 +5,12 @@ import logo from '../../assets/logo-white.webp'
 
 const Navbar = () => {
     const Links = [
-        { name: "Home", link: "/" },
-        { name: "Product", link: "/product" },
-        { name: "Explore", link: "/explore" },
-        { name: "Contact", link: "/contact" },
+        { name: "HOME", link: "/" },
+        { name: "APARTMENTS", link: "/APARTMENTS" },
+        { name: "FACILITIES", link: "/FACILITIES" },
+        { name: "AGENCY", link: "/AGENCY" },
+        { name: "PROPERTIES", link: "/PROPERTIES" },
+        { name: "CONTACT", link: "/CONTACT" },
     ];
 
     const [open, setOpen] = useState(false);
@@ -24,7 +26,7 @@ const Navbar = () => {
                 {/* Desktop Links */}
                 <ul className="hidden xl:flex items-center gap-8 font-semibold text-lg">
                     {Links.map((link, index) => (
-                        <li key={index} className="hover:bg-sky-400 hover:text-white rounded-md p-2 transition-all cursor-pointer">
+                        <li key={index} className="text-[#ebcfa7] hover:text-white rounded-md p-2 transition-all cursor-pointer">
                             <a href={link.link}>{link.name}</a>
                         </li>
                     ))}
@@ -56,7 +58,7 @@ const Navbar = () => {
                     <input
                         type="text"
                         placeholder="Search here"
-                        className="placeholder:text-white bg-transparent input input-bordered input-info w-full max-w-xs rounded-xl border-2 border-blue-300 focus:bg-slate-100 focus:outline-sky-500 hidden md:flex items-center gap-3 "
+                        className="placeholder:text-[#ebcfa7] bg-transparent input input-bordered input-info w-full max-w-xs rounded-xl border-2 border-[#ebcfa7] focus:bg-slate-100 focus:outline-sky-500 hidden md:flex items-center gap-3 "
                     />
                 </div>
 
