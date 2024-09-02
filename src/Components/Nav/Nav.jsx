@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { IoLogoJavascript } from "react-icons/io";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiCross } from "react-icons/bi";
+import logo from '../../assets/logo-white.webp'
 
 const Navbar = () => {
     const Links = [
@@ -14,14 +14,11 @@ const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div className="shadow-md w-full fixed top-0 left-0 z-50 bg-white">
+        <div className="w-full fixed top-0 left-0 z-50 bg-transparent">
             <div className="flex items-center justify-between py-4 px-7 md:px-10">
                 {/* Logo */}
                 <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
-                    <span className="text-5xl">
-                        <IoLogoJavascript />
-                    </span>
-                    <span className="ml-3"> Nav</span>
+                    <img src={logo} alt="" />
                 </div>
 
                 {/* Desktop Links */}
@@ -50,7 +47,6 @@ const Navbar = () => {
                             <li>
                                 <a className="justify-between">
                                     Profile
-                                    <span className="badge">New</span>
                                 </a>
                             </li>
                             <li><a>Settings</a></li>
@@ -60,7 +56,7 @@ const Navbar = () => {
                     <input
                         type="text"
                         placeholder="Search here"
-                        className="input input-bordered input-info w-full max-w-xs rounded-xl border-2 border-blue-300 focus:bg-slate-100 focus:outline-sky-500 hidden md:flex items-center gap-3"
+                        className="placeholder:text-white bg-transparent input input-bordered input-info w-full max-w-xs rounded-xl border-2 border-blue-300 focus:bg-slate-100 focus:outline-sky-500 hidden md:flex items-center gap-3 "
                     />
                 </div>
 
