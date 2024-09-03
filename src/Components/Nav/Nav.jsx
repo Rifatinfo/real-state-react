@@ -2,8 +2,10 @@ import { useState } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiCross } from "react-icons/bi";
 import logo from '../../assets/logo-white.webp';
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+
+const Nav = () => {
     const Links = [
         { name: "HOME", link: "/" },
         { name: "APARTMENTS", link: "/APARTMENTS" },
@@ -38,7 +40,7 @@ const Navbar = () => {
                 {/* Search Bar - Hidden on small screens */}
                 <div className="flex justify-around gap-4">
                     {/* Dropdown Menu for Avatar */}
-                    <div className="dropdown dropdown-end relative">
+                    <div className="dropdown dropdown-end relative hidden">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <img
@@ -54,6 +56,13 @@ const Navbar = () => {
                             )}
                         </div>
                     </div>
+
+                    {/* login */}
+                    <Link to="/login">
+                        <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                            Login
+                        </button>
+                    </Link>
 
                     <input
                         type="text"
@@ -85,4 +94,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Nav;
