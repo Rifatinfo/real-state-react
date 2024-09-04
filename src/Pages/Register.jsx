@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import Nav from "../Components/Nav/Nav";
-import loginImg from "../assets/login-img.jpg";
-import loginPageImag from '../assets/login-page.jpg'
-const Login = () => {
+import regiterImg from "../assets/register-img.jpg";
+import registerPage from "../assets/register-page.jpg";
+
+
+const Register = () => {
     return (
         <div>
             <Nav></Nav>
             <div className="relative">
-                <img className="w-full h-96 object-cover lg:h-[513px]" src={loginImg} alt="Login" />
+                <img className="w-full h-96 object-cover lg:h-[513px]" src={regiterImg} alt="Login" />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-4 sm:p-6 lg:p-8">
-                    <h2 className="text-[#ebcfa7] md:text-5xl text-4xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Login Now!</h2>
+                    <h2 className="text-[#ebcfa7] md:text-5xl text-4xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Register now!</h2>
                     <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">Huge number of propreties availabe here for buy and sell<br /> also you can find here co-living property as you like</p>
                 </div>
             </div>
@@ -18,7 +20,7 @@ const Login = () => {
             <div className="p-4 grid gap-7 grid-cols-1 lg:grid-cols-2 md:grid-cols-2 lg:max-w-6xl lg:mx-auto md:max-w-6xl md:mx-auto">
                 <div className="space-y-20 border">
                     <div className="space-y-9">
-                        <h1 className="text-4xl font-bold">Login to Bary</h1>
+                        <h1 className="text-4xl font-bold">Create Account.</h1>
                         <p>Huge number of propreties availabe here for buy, sell and Rent.<br /> Also you find here co-living property, lots opportunity you have<br /> to choose here and enjoy huge discount you can get.</p>
                     </div>
                     <div className="space-y-10 border">
@@ -31,23 +33,26 @@ const Login = () => {
                             <p className="hover:under-line ">Forget password</p>
                         </div>
 
-                        <div className="flex gap-5 items-center">
+                        <div className="md:flex md:gap-5 md:items-center lg:w-[400px] lg:justify-between">
                             <button className="btn btn-outline border-2 border-[#ebcfa7] text-black hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
-                                Login
+                                Register
                             </button>
-                            <Link to="/register">
-                              <p className="hover:text-[#ebcfa7] underline font-medium text-black">Register</p>
+                            <Link to="/login">
+                                <div className="lg:flex lg:items-center lg:gap-2 flex gap-2 justify-center mt-4">
+                                    <span>Already have an Account?</span>
+                                    <p className="hover:text-[#ebcfa7] underline font-medium text-black"> Login</p>
+                                </div>
                             </Link>
                         </div>
                     </div>
 
                 </div>
                 <div>
-                    <img className=" rounded-xl md:h-[622px] " src={loginPageImag} alt="" />
+                    <img className=" rounded-xl md:h-[622px] " src={registerPage} alt="" />
                 </div>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;
