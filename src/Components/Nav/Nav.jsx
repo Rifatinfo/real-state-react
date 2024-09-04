@@ -21,7 +21,7 @@ const Nav = () => {
     const toggleMenu = () => setOpen(!open);
 
     return (
-        <div className="w-full fixed top-0 left-0 z-50 bg-transparent">
+        <div className="w-full fixed top-0 left-0 z-50 bg-transparent ">
             <div className="flex items-center justify-between py-4 px-7 md:px-10 relative">
                 {/* Logo */}
                 <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
