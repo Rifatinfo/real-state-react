@@ -1,15 +1,40 @@
 import { Link } from "react-router-dom";
 import Nav from "../Components/Nav/Nav";
-import regiterImg from "../assets/register-img.jpg";
+import registerImg from "../assets/register-img.jpg";
 import registerPage from "../assets/register-page.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
+
+    const handleRegister = e =>{
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        console.log(e.currentTarget);
+        console.log(form);
+        const email = form.get('email');
+        const password = form.get('password');
+        const name = form.get('name');
+        const photo = form.get('photo');
+        console.log(email,password,name,photo);
+
+         // createUser
+         createUser(email, password)
+         .then(result => {
+             console.log(result.user)
+         })
+         .catch(error => {
+             console.log(error)
+         })
+    }
     return (
         <div>
             <Nav></Nav>
             <div className="relative">
-                <img className="w-full h-96 object-cover lg:h-[513px]" src={regiterImg} alt="Login" />
+                <img className="w-full h-96 object-cover lg:h-[513px]" src={registerImg} alt="Login" />
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-4 sm:p-6 lg:p-8">
                     <h2 className="text-[#ebcfa7] md:text-5xl text-4xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Register now!</h2>
                     <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">Huge number of propreties availabe here for buy and sell<br /> also you can find here co-living property as you like</p>
@@ -23,12 +48,12 @@ const Register = () => {
                         <h1 className="text-4xl font-bold">Create Account.</h1>
                         <p>Huge number of propreties availabe here for buy, sell and Rent.<br /> Also you find here co-living property, lots opportunity you have<br /> to choose here and enjoy huge discount you can get.</p>
                     </div>
-                    <div className="space-y-10 ">
-                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="text" placeholder="User name"></input><br />
-                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="email" placeholder="Email"></input><br />
-                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="photo" placeholder="Photo URL"></input><br />
-                        <input className="font-light w-full sm:w-[400px]  md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="password" placeholder="Password"></input><br/>
-                        <input className="font-light w-full sm:w-[400px]  md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " type="password" placeholder="Confirm Password"></input>
+                    <form onSubmit={handleRegister} className="space-y-10 ">
+                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "  name="name" type="name" placeholder="User name"></input><br />
+                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "  name="email" type="email" placeholder="Email"></input><br />
+                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] "  name="photo" type="photo" placeholder="Photo URL"></input><br />
+                        <input className="font-light w-full sm:w-[400px]  md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " name="password" type="password" placeholder="Password"></input><br/>
+                        <input className="font-light w-full sm:w-[400px]  md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2  focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)] " name="password" type="password" placeholder="Confirm Password"></input>
 
                         <div className=" flex justify-between items-center  lg:justify-between lg:items-center 
                                     lg:w-[400px] md:justify-between md:items-center">
@@ -47,7 +72,7 @@ const Register = () => {
                                 </div>
                             </Link>
                         </div>
-                    </div>
+                    </form>
 
                 </div>
                 <div className="flex justify-center items-center">
