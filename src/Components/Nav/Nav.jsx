@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { BiCross } from "react-icons/bi";
 import logo from '../../assets/logo-white.webp';
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Nav = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
     const Links = [
         { name: "HOME", link: "/" },
         { name: "APARTMENTS", link: "/APARTMENTS" },
@@ -40,29 +49,39 @@ const Nav = () => {
                 {/* Search Bar - Hidden on small screens */}
                 <div className="flex justify-around gap-4">
                     {/* Dropdown Menu for Avatar */}
-                    <div className="dropdown dropdown-end relative hidden">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img
-                                    onMouseEnter={() => setIsHovered(true)}
-                                    onMouseLeave={() => setIsHovered(false)}
-                                    alt="Avatar"
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    {
+                        user ? <div className="dropdown dropdown-end relative">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                        alt="Avatar"
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                                {isHovered && (
+                                    <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-700 text-white text-sm rounded">
+                                        Rifat
+                                    </span>
+                                )}
                             </div>
-                            {isHovered && (
-                                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-gray-700 text-white text-sm rounded">
-                                    User Name
-                                </span>
-                            )}
-                        </div>
-                    </div>
+                        </div> : ""
+                    }
 
                     {/* login */}
-                    <Link to="/login">
-                        <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
-                            Login
-                        </button>
-                    </Link>
+                    {
+                        user ?
+                            <button onClick={handleSignOut} className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                                SignOut
+                            </button>
+                            :
+                            <Link to="/login">
+                                <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                                    Login
+                                </button>
+                            </Link>
+                    }
+
 
                     <input
                         type="text"

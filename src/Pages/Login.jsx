@@ -6,13 +6,15 @@ import { IoLogoGoogle } from "react-icons/io5";
 import { IoLogoTwitter } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 
 
 const Login = () => {
     
-    
+    const {signIn} = useContext(AuthContext);
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -22,7 +24,12 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email,password);
-
+        signIn(email, password)
+        .then(result => {
+            console.log(result);
+            e.target.reset();
+        })
+        .catch(error => console.log(error))
     }
     return (
         <div>
