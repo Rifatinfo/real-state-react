@@ -1,0 +1,112 @@
+ [
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/penthouse-apartment-01-450x300.jpg",
+        "estate_title": "Oceanview Penthouse",
+        "id": 1,
+        "segment_name": "Penthouse",
+        "description": "A stunning penthouse with panoramic ocean views and luxurious amenities.",
+        "price": "$5,000,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Miami Beach, FL",
+        "facilities": ["living room", "swimming pool", "kitchen", "rooftop terrace", "gym"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/family-mansion-1-450x300.jpg",
+        "estate_title": "Beachfront Villa",
+        "id": 2,
+        "segment_name": "Beachfront Property",
+        "description": "A modern villa directly on the beach with private access to the ocean.",
+        "price": "$8,000,000",
+        "status": "sale",
+        "area": "4500 sq ft",
+        "location": "Malibu, CA",
+        "facilities": ["living room", "swimming pool", "kitchen", "private beach", "spa"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-2-450x300.jpg",
+        "estate_title": "Private Island Retreat",
+        "id": 3,
+        "segment_name": "Private Island",
+        "description": "A secluded private island with pristine beaches and luxurious accommodations.",
+        "price": "$20,000,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "Caribbean",
+        "facilities": ["living room", "swimming pool", "kitchen", "helipad", "private dock"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/east-sunglight-01-450x300.jpg",
+        "estate_title": "Luxury Beach Resort",
+        "id": 4,
+        "segment_name": "Resorts",
+        "description": "A world-class resort with exclusive amenities and breathtaking ocean views.",
+        "price": "$15,000 per night",
+        "status": "rent",
+        "area": "5000 sq ft",
+        "location": "Bora Bora",
+        "facilities": ["living room", "swimming pool", "kitchen", "spa", "private beach"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/property-grid-img-1-450x300.jpg",
+        "estate_title": "Mountain View Villa",
+        "id": 5,
+        "segment_name": "Villas",
+        "description": "A spacious villa with stunning mountain views and top-of-the-line amenities.",
+        "price": "$3,000,000",
+        "status": "sale",
+        "area": "3500 sq ft",
+        "location": "Aspen, CO",
+        "facilities": ["living room", "swimming pool", "kitchen", "home theater", "sauna"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/modern-family-house-01-450x300.jpg",
+        "estate_title": "Modern Luxury Mansion",
+        "id": 6,
+        "segment_name": "Mansions",
+        "description": "A sprawling mansion with sleek modern design and expansive living spaces.",
+        "price": "$10,000,000",
+        "status": "sale",
+        "area": "7000 sq ft",
+        "location": "Beverly Hills, CA",
+        "facilities": ["living room", "swimming pool", "kitchen", "gym", "wine cellar"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-2-450x300.jpg",
+        "estate_title": "Lakefront Estate",
+        "id": 7,
+        "segment_name": "Beachfront Property",
+        "description": "A grand estate on the lake with private dock and beautiful waterfront views.",
+        "price": "$6,500,000",
+        "status": "sale",
+        "area": "4000 sq ft",
+        "location": "Lake Tahoe, NV",
+        "facilities": ["living room", "swimming pool", "kitchen", "private dock", "fireplace"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-3-450x300.jpg",
+        "estate_title": "Eco-Friendly Resort",
+        "id": 8,
+        "segment_name": "Resorts",
+        "description": "An environmentally conscious resort with sustainable features and luxury services.",
+        "price": "$12,000 per night",
+        "status": "rent",
+        "area": "4500 sq ft",
+        "location": "Costa Rica",
+        "facilities": ["living room", "swimming pool", "kitchen", "yoga pavilion", "organic farm"]
+      },
+      {
+        "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-4-450x300.jpg",
+        "estate_title": "Island Villa with Infinity Pool",
+        "id": 9,
+        "segment_name": "Villas",
+        "description": "A serene island villa with an infinity pool and stunning ocean views.",
+        "price": "$9,000,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Santorini, Greece",
+        "facilities": ["living room", "swimming pool", "kitchen", "outdoor dining area", "private garden"]
+      }
+]
+
+  
