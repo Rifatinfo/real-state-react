@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Nav from "../Components/Nav/Nav";
 import loginImg from "../assets/login-img.jpg";
 import loginPageImag from '../assets/login-page.jpg'
@@ -15,6 +15,9 @@ import { AuthContext } from "../Provider/AuthProvider";
 const Login = () => {
     
     const {signIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('location in the login pager',location);
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -28,6 +31,9 @@ const Login = () => {
         .then(result => {
             console.log(result);
             e.target.reset();
+
+            // navigate after login 
+            navigate(location?.state ? location.state : '/');
         })
         .catch(error => console.log(error))
     }
