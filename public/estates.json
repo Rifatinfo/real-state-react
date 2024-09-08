@@ -1,10 +1,6 @@
  [
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/penthouse-apartment-01-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Oceanview Penthouse",
         "id": 1,
         "segment_name": "Penthouse",
@@ -17,10 +13,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/family-mansion-1-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Beachfront Villa",
         "id": 2,
         "segment_name": "Beachfront Property",
@@ -33,11 +25,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-2-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
-        "estate_title": "Private Island Retreat",
         "id": 3,
         "segment_name": "Private Island",
         "description": "A secluded private island with pristine beaches and luxurious accommodations.",
@@ -49,10 +36,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/east-sunglight-01-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Luxury Beach Resort",
         "id": 4,
         "segment_name": "Resorts",
@@ -65,10 +48,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/property-grid-img-1-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Mountain View Villa",
         "id": 5,
         "segment_name": "Villas",
@@ -81,10 +60,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/modern-family-house-01-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Modern Luxury Mansion",
         "id": 6,
         "segment_name": "Mansions",
@@ -97,10 +72,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-2-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Lakefront Estate",
         "id": 7,
         "segment_name": "Beachfront Property",
@@ -113,10 +84,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-3-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Eco-Friendly Resort",
         "id": 8,
         "segment_name": "Resorts",
@@ -129,10 +96,6 @@
       },
       {
         "image": "https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-4-450x300.jpg",
-        "estate_slider_1": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_3.png",
-        "estate_slider_2": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_2.png",
-        "estate_slider_3": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_5.png",
-        "estate_slider_4": "https://wordpress.themeholy.com/realar/wp-content/uploads/2024/05/property_inner_1.png",
         "estate_title": "Island Villa with Infinity Pool",
         "id": 9,
         "segment_name": "Villas",
@@ -145,4 +108,3 @@
       }
 ]
 
-  

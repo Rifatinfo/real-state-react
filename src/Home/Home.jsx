@@ -4,7 +4,7 @@ import EstateCart from "../Components/EstateCart/EstateCart";
 
 const Home = () => {
     const estateNews = useLoaderData();
-    console.log(estateNews);
+    console.log(typeof estateNews);
     return (
         <div>
             <Slider></Slider>
