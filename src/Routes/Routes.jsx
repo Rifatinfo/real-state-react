@@ -3,6 +3,8 @@ import Roots from "../Roots/Roots";
 import Home from "../Home/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import EstateDetails from "../Components/EstateDetails/EstateDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -14,6 +16,10 @@ const router = createBrowserRouter([
             path : '/',
             element : <Home></Home>,
             loader : () => fetch('estates.json')
+        },
+        {
+          path : '/estate/:id',
+          element: <PrivateRoute><EstateDetails /></PrivateRoute>
         },
        {
            path : "/login",

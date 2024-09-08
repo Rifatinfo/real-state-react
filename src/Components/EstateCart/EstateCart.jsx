@@ -1,6 +1,6 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineAreaChart } from "react-icons/ai";
-import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const EstateCart = ({ estateNews }) => {
     const { image, estate_title, id, segment_name, description, price, status, area, location, facilities, } = estateNews;
@@ -9,7 +9,7 @@ const EstateCart = ({ estateNews }) => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3 lg:space-y-3 md:space-y-3 border p-4 rounded-lg">
                 {/* Image Column */}
                 <div className="flex justify-center items-center ">
-                    <img  src={image} alt={estate_title} className="w-full h-auto rounded-lg" />
+                    <img src={image} alt={estate_title} className="w-full h-auto rounded-lg" />
                 </div>
                 {/* Estate Details */}
                 <div className="col-span-2 space-y-4">
@@ -40,20 +40,23 @@ const EstateCart = ({ estateNews }) => {
                                 <p>{area}</p>
                             </div>
                             <div className="hidden md:block">
-                                <button className=" rounded-xl p-2 btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
-                                    <div className=" flex gap-3 justify-center item-center">
-                                        <p> Details</p>
-                                        <p><FaArrowRight /></p>
-                                    </div>
-                                </button>
+                                <Link to={`/estate/${id}`}>
+                                    <button className=" rounded-xl p-2 btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                                        <div className=" ">
+                                            <p className="flex item-center"> View Property</p>
+                                        </div>
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
                     </div>
                     {/* for small device button  */}
-                    <button className="lg:hidden  md:hidden p-2 btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
-                        Details
-                    </button>
+                    <Link to={`/estate/${id}`}>
+                        <button className="lg:hidden  md:hidden p-2 btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                        View Property
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
