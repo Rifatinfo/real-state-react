@@ -44,6 +44,15 @@ const EstateDetails = () => {
                             <p>{estateDetail.feedback}</p>
                         </div>
                     </div>
+                    <div className="mt-2  md:flex md:items-center gap-7 lg:flex lg:items-center">
+                        <div>
+                            <img className="mx-auto border border-[#ebcfa7] rounded-[26px] w-20 h-20" src={agent2} alt="" />
+                        </div>
+                        <div>
+                            <p className="sm:text-center font-bold">Shane Williamson</p>
+                            <p>{estateDetail.feedback}</p>
+                        </div>
+                    </div>
                 </div>
                 <div className="w-full md:flex-1 lg:flex-1 md:w-3/6 lg:w-2/5">
                     <p className="text-2xl font-bold underline mb-3">Property Search .</p>
@@ -169,7 +178,6 @@ const EstateDetails = () => {
                         <div className="mt-10 ">
                             <p className="text-2xl font-bold underline mb-3">Our Plan</p>
                             <img className="mx-auto" src={layout1} alt="" />
-                            <img className="mx-auto" src={layout2} alt="" />
                         </div>
                     </div>
                 </div>
