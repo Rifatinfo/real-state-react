@@ -2,6 +2,11 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import details_pages from "../../assets/details_page_image.png"
 import post1 from "../../assets/post1.webp"
+import { AiOutlineAreaChart } from "react-icons/ai";
+import agent1 from "../../assets/person_1.webp"
+import agent2 from "../../assets/person2.webp"
+import layout1 from "../../assets/floor1.webp"
+import layout2 from "../../assets/floor2.webp"
 const EstateDetails = () => {
     const estateNews = useLoaderData();
     console.log(typeof estateNews);  // object 
@@ -11,9 +16,6 @@ const EstateDetails = () => {
     console.log(estateNews, id);
     return (
         <div>
-            {/* { id}
-            {estateDetail.description}
-            <img src={estateDetail.image} alt="" /> */}
             <Nav></Nav>
             <div className="relative">
                 <img className="w-full h-96 object-cover lg:h-[513px]" src={details_pages} alt="Login" />
@@ -24,15 +26,26 @@ const EstateDetails = () => {
             </div>
 
             {/* description page  */}
-            <div className="w-full space-y-4 md:flex md:gap-4 lg:flex lg:gap-5 border md:max-w-6xl md:mx-auto lg:max-w-6xl lg:mx-auto mt-5">
-                <div className="w-full md:flex-2 lg:flex-2 border  md:w-3/6 lg:w-3/5">
+            <div className="w-full space-y-4 md:flex md:gap-4 lg:flex lg:gap-5 md:max-w-6xl md:mx-auto lg:max-w-6xl lg:mx-auto mt-5">
+                <div className="w-full md:flex-2 lg:flex-2  md:w-3/6 lg:w-3/5">
                     <img className="rounded-xl" src={post1} alt="" />
                     <div className="mt-10 space-y-5">
                         <p className="text-4xl font-bold hover:underline">{estateDetail.estate_title}</p>
-                        <p>{estateDetail.long_description}</p>
+                        <p>{estateDetail.long_description}<span><img className="lg:max-w-6xl lg:mx-auto md:max-w-6xl  md:mx-auto rounded-lg" src={estateDetail.image} alt="" /></span>{estateDetail.long_description}</p>
+                    </div>
+                    {/* feedback */}
+                    <h1 className="text-2xl font-bold hover:underline mt-28">Feedback</h1>
+                    <div className="mt-5  md:flex md:items-center gap-7 lg:flex lg:items-center">
+                        <div>
+                            <img className="mx-auto border border-[#ebcfa7] rounded-[26px] w-20 h-20" src={agent1} alt="" />
+                        </div>
+                        <div>
+                            <p className="sm:text-center font-bold">{estateDetail.person_name}</p>
+                            <p>{estateDetail.feedback}</p>
+                        </div>
                     </div>
                 </div>
-                <div className="w-full md:flex-1 lg:flex-1 border  md:w-3/6 lg:w-2/5">
+                <div className="w-full md:flex-1 lg:flex-1 md:w-3/6 lg:w-2/5">
                     <p className="text-2xl font-bold underline mb-3">Property Search .</p>
                     <form>
                         <input
@@ -82,9 +95,86 @@ const EstateDetails = () => {
                             search
                         </button>
                     </form>
+
+                    {/* Featured Property. */}
+                    <div className="mt-10">
+                        <p className="text-2xl font-bold underline mb-3">Featured Property.</p>
+                        {/* slider */}
+                        <div className="carousel w-full">
+                            <div id="slide1" className="carousel-item relative w-full">
+                                <img
+                                    src="https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-3-450x300.jpg"
+                                    className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a href="#slide4" className="btn btn-circle">❮</a>
+                                    <a href="#slide2" className="btn btn-circle">❯</a>
+                                </div>
+                            </div>
+                            <div id="slide2" className="carousel-item relative w-full">
+                                <img
+                                    src="https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/family-mansion-1-450x300.jpg"
+                                    className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a href="#slide1" className="btn btn-circle">❮</a>
+                                    <a href="#slide3" className="btn btn-circle">❯</a>
+                                </div>
+                            </div>
+                            <div id="slide3" className="carousel-item relative w-full">
+                                <img
+                                    src="https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/list-half-map-image-2-450x300.jpg"
+                                    className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a href="#slide2" className="btn btn-circle">❮</a>
+                                    <a href="#slide4" className="btn btn-circle">❯</a>
+                                </div>
+                            </div>
+                            <div id="slide4" className="carousel-item relative w-full">
+                                <img
+                                    src="https://newhome.qodeinteractive.com/wp-content/uploads/2023/03/modern-family-house-01-450x300.jpg"
+                                    className="w-full" />
+                                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                                    <a href="#slide3" className="btn btn-circle">❮</a>
+                                    <a href="#slide1" className="btn btn-circle">❯</a>
+                                </div>
+                            </div>
+                        </div>
+                        {/* details */}
+                        <div className="space-y-2">
+                            <p className="text-xl hover:underline">{estateDetail.estate_title}</p>
+                            <p className="underline">{estateDetail.address}</p>
+                        </div>
+                        <div className="flex items-center justify-around gap-4 text-3xl font-bold">
+                            <div>
+                                {estateDetail.price}
+                            </div>
+                            <div className="flex gap-3 items-center">
+                                <p><AiOutlineAreaChart /></p>
+                                <p>{estateDetail.area}</p>
+                            </div>
+                        </div>
+                        {/* our agent */}
+                        <div className="md:flex gap-3 lg:flex mt-20">
+                            <div>
+                                <img className="border-b-8 border-b-orange-200 rounded-lg mx-auto" src={agent1} alt="" />
+                                <p className="text-center font-bold">{estateDetail.person_name}</p>
+                                <p className="text-center">{estateDetail.feedback}</p>
+                            </div>
+                            <div>
+                                <img className="border-b-8 border-b-orange-200 rounded-lg mx-auto" src={agent2} alt="" />
+                                <p className="text-center font-bold">Amelia Margaret</p>
+                                <p className="text-center">{estateDetail.feedback}</p>
+                            </div>
+                        </div>
+                        {/* plane layout */}
+                        <div className="mt-10 ">
+                            <p className="text-2xl font-bold underline mb-3">Our Plan</p>
+                            <img className="mx-auto" src={layout1} alt="" />
+                            <img className="mx-auto" src={layout2} alt="" />
+                        </div>
+                    </div>
                 </div>
 
-              {/* text field close */}
+                {/* text field close */}
 
             </div>
 
