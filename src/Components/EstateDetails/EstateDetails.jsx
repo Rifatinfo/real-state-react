@@ -178,6 +178,7 @@ const EstateDetails = () => {
                         <div className="mt-10 ">
                             <p className="text-2xl font-bold underline mb-3">Our Plan</p>
                             <img className="mx-auto" src={layout1} alt="" />
+                            <img className="mx-auto" src={layout2} alt="" />
                         </div>
                     </div>
                 </div>

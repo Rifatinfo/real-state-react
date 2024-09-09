@@ -2,13 +2,18 @@ import { Link } from "react-router-dom";
 import Nav from "../Components/Nav/Nav";
 import registerImg from "../assets/register-img.jpg";
 import registerPage from "../assets/register-page.jpg";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
-
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
     const {createUser} = useContext(AuthContext);
+    
+    const notifyRegister = () => toast('User Created Successfully');
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -20,15 +25,19 @@ const Register = () => {
         const name = form.get('name');
         const photo = form.get('photo');
         console.log(email,password,name,photo);
-
+        // reset error 
+        setRegisterError('');
+        setSuccess('');
          // createUser
          createUser(email, password)
          .then(result => {
              console.log(result.user);
              e.target.reset();
+             setSuccess('User Created Successfully');
          })
          .catch(error => {
-             console.log(error)
+             console.log(error);
+             setRegisterError(error.message);
          })
     }
     return (
@@ -63,7 +72,7 @@ const Register = () => {
                         </div>
 
                         <div className="md:flex md:gap-5 md:items-center lg:w-[400px] lg:justify-between">
-                            <button className="btn btn-outline border-2 border-[#ebcfa7] text-black hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                            <button onClick={notifyRegister} className="btn btn-outline border-2 border-[#ebcfa7] text-black hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
                                 Register
                             </button>
                             <Link to="/login">
@@ -74,7 +83,10 @@ const Register = () => {
                             </Link>
                         </div>
                     </form>
-
+                   {/* show error */}
+                   {
+                    registerError && <p>{registerError}</p>
+                   }
                 </div>
                 <div className="flex justify-center items-center">
                     <img className="rounded-xl md:h-[622px] " src={registerPage} alt="" />
