@@ -11,7 +11,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const notifyLogin = () => toast('User Logging Successfully');
+const notifyLogin = () => toast.success('User Logging Successfully');
 const Login = () => {
     
     const {signIn} = useContext(AuthContext);
@@ -31,11 +31,14 @@ const Login = () => {
         .then(result => {
             console.log(result);
             e.target.reset();
-
+            notifyLogin();
             // navigate after login 
             navigate(location?.state ? location.state : '/');
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error)
+            toast.error('Something went problem');
+        })
     }
     return (
         <div>

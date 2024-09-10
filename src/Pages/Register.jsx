@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -60,12 +61,18 @@ const Register = () => {
                 e.target.reset();
                 setSuccess('User Created Successfully');
                 notifyRegister(); // Show toast on success
+                updateProfile(result.user, {
+                    displayName : name,
+                    photoURL : photo
+                })
             })
             .catch(error => {
                 console.log(error);
                 setRegisterError(error.message);
                 toast.error('Error: ' + error.message);
             });
+           
+        
     };
 
     return (
