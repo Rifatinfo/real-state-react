@@ -11,8 +11,8 @@ const About = () => {
                     <h1 className="lg:text-6xl text-center mb-4">About Bary.</h1>
                     <p className="text-center">Huge number of propreties availabe here for buy<br /> and sell, also you can find here co-living property</p>
                 </div>
-                <div className="mt-11">
-                    <img className="mx-auto w-full" src={about_page} alt=""  width="597" height="716"/>
+                <div className="mt-11 mx-w-6xl mx-auto">
+                    <img className="mx-auto  lg:w-[597px] lg:h-auto" src={about_page} alt=""  width="597" height="716"/>
                 </div>
                 <div className="mt-4">
                     <p className="text-center text-[#DDC7BB]">Since 1975</p>
