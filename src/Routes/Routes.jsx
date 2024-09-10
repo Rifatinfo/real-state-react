@@ -5,33 +5,38 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import EstateDetails from "../Components/EstateDetails/EstateDetails";
 import PrivateRoute from "./PrivateRoute";
+import About from "../About/About";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Roots></Roots>,
-      children : [
-        {
-            path : '/',
-            element : <Home></Home>,
-            loader : () => fetch('estates.json')
-        },
-        {
-          path : '/estate/:id',
-          element: <PrivateRoute><EstateDetails /></PrivateRoute>,
-          loader : () => fetch('../estates.json')
-        },
-       {
-           path : "/login",
-           element : <Login></Login>
-       },
-       {
-        path : "/register",
-        element : <Register></Register>
+  {
+    path: "/",
+    element: <Roots></Roots>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('estates.json')
+      },
+      {
+        path: '/estate/:id',
+        element: <PrivateRoute><EstateDetails /></PrivateRoute>,
+        loader: () => fetch('../estates.json')
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+      {
+        path:"/about",
+        element : <PrivateRoute><About></About></PrivateRoute>
        }
-      ]
-    },
-  ]);
+    ]
+  },
+]);
 
-  export  default router;
+export default router;
