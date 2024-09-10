@@ -8,12 +8,13 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const notifyLogin = () => toast.success('User Logging Successfully');
+
 const Login = () => {
-    
+    const notifyLogin = () => toast.success('User Logging Successfully'); 
     const {signIn} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
@@ -34,10 +35,11 @@ const Login = () => {
             notifyLogin();
             // navigate after login 
             navigate(location?.state ? location.state : '/');
+           
         })
         .catch(error => {
             console.log(error)
-            toast.error('Something went problem');
+            toast.error('Something went wrong');
         })
     }
     return (
@@ -75,7 +77,7 @@ const Login = () => {
                        <FaFacebook />
                        </div>
                         <div className="flex gap-5 items-center">
-                            <button onClick={notifyLogin} className="btn btn-outline border-2 border-[#ebcfa7] text-black hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
+                            <button type="submit" className="btn btn-outline border-2 border-[#ebcfa7] text-black hover:bg-[#ebcfa7] hover:text-white hover:border-2 hover:border-[#ebcfa7] transition-all duration-200">
                                 Login
                             </button>
                             <Link to="/register">
