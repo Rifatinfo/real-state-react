@@ -9,14 +9,14 @@ const About = () => {
             <div className="mt-32">
                 <div>
                     <h1 className="lg:text-6xl text-center mb-4">About Bary.</h1>
-                    <p className="text-center">Huge number of propreties availabe here for buy<br /> and sell, also you can find here co-living property</p>
+                    <p className="text-center text-sm">Huge number of propreties availabe here for buy<br /> and sell, also you can find here co-living property</p>
                 </div>
                 <div className="mt-11 mx-w-6xl mx-auto">
-                    <img className="mx-auto  lg:w-[597px] lg:h-auto" src={about_page} alt=""  width="597" height="716"/>
+                    <img className="mx-auto w-72 lg:w-[597px] lg:h-auto" src={about_page} alt=""  width="597" height="716"/>
                 </div>
                 <div className="mt-4">
                     <p className="text-center text-[#DDC7BB]">Since 1975</p>
-                    <h1 className="text-center lg:text-3xl font-semibold">We Provide Right Choice of Properties that You <br />need and have great opportunity to choose<br /> from thousands of Collection</h1>
+                    <h1 className="text-center lg:text-3xl font-semibold text-sm">We Provide Right Choice of Properties that You <br />need and have great opportunity to choose<br /> from thousands of Collection</h1>
                 </div>
                 {/* counting */}
                 <div className="flex justify-center space-x-8 text-center mt-8 mb-8">
