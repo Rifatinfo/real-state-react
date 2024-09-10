@@ -6,10 +6,14 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 
 const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
     const { createUser } = useContext(AuthContext);
     console.log(success);
     const notifyRegister = () => toast.success('User Created Successfully');
@@ -26,14 +30,14 @@ const Register = () => {
         // Reset error and success messages
         setRegisterError('');
         setSuccess('');
-        
+
 
         //basic validation 
         if (!email || !password || !confirmPassword || !name) {
             toast.error('All fields are required!');
             return;
         }
-        if(password !== confirmPassword){
+        if (password !== confirmPassword) {
             toast.error('Passwords do not match!');
             return;
         }
@@ -41,27 +45,27 @@ const Register = () => {
             toast.error('Password must be at least 6 characters long!');
             return;
         }
-        else if(!/A-Z/.test(password)){
+        else if (!/A-Z/.test(password)) {
             toast.error('Must have an Uppercase letter in the password');
             return;
         }
-        else if(!/[a-z]/.test(password)){
+        else if (!/[a-z]/.test(password)) {
             toast.error('Must have a Lowercase letter in the password');
             return;
         }
         // Create user
         createUser(email, password)
-        .then(result => {
-            console.log(result.user);
-            e.target.reset();
-            setSuccess('User Created Successfully');
-            notifyRegister(); // Show toast on success
-        })
-        .catch(error => {
-            console.log(error);
-            setRegisterError(error.message);
-            toast.error('Error: ' + error.message);
-        });
+            .then(result => {
+                console.log(result.user);
+                e.target.reset();
+                setSuccess('User Created Successfully');
+                notifyRegister(); // Show toast on success
+            })
+            .catch(error => {
+                console.log(error);
+                setRegisterError(error.message);
+                toast.error('Error: ' + error.message);
+            });
     };
 
     return (
@@ -86,7 +90,19 @@ const Register = () => {
                         <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]" name="name" type="text" placeholder="User name" /><br />
                         <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]" name="email" type="email" placeholder="Email" /><br />
                         <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]" name="photo" type="text" placeholder="Photo URL" /><br />
-                        <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]" name="password" type="password" placeholder="Password" /><br />
+                        <div className="relative">
+                            <input
+                                className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]"
+                                name="password"
+                                type={showPassword ? "text" : "password"}
+                                placeholder="Password" />
+                            <span className="absolute top-5 right-4 text-2xl lg:right-44" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ?  <FaEye /> : <FaEyeSlash />
+                                }
+                            </span>
+                        </div>
+                 
                         <input className="font-light w-full sm:w-[400px] md:w-[350px] lg:w-[400px] leading-[1.75] placeholder:opacity-100 placeholder:text-body border-2 border-black border-opacity-60 rounded-[8px] p-[15px] focus:border-2 focus:border-[#ebcfa7] focus:border-opacity-60 focus:outline-none focus:drop-shadow-[0px_6px_15px_rgba(0,0,0,0.1)]" name="confirmPassword" type="password" placeholder="Confirm Password" />
 
                         <div className="flex justify-between items-center lg:justify-between lg:items-center lg:w-[400px] md:justify-between md:items-center">
