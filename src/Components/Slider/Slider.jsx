@@ -45,7 +45,7 @@ const Slider = () => {
                 <SwiperSlide>
                     <img src={slider2} alt="" className="w-full object-cover h-screen min-h-screen " />
                     <div className="bg-black bg-opacity-50 absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4 sm:p-6 lg:p-8">
-                        <h2 className="text-[#ebcfa7] md:text-5xl text-7xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Elite Residences</h2>
+                        <h2 className="text-[#ebcfa7] md:text-5xl text-4xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Elite Residences</h2>
                         <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">Provide a decent level of comfort</p>
                         <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white shadow-sm hover:shadow-lg transition-all duration-200">  Get A Consultation</button>
                     </div>
@@ -53,7 +53,7 @@ const Slider = () => {
                 <SwiperSlide>
                     <img src={slider1} alt="" className="w-full  object-cover  h-screen min-h-screen" />
                     <div className="bg-black bg-opacity-50  absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4 sm:p-6 lg:p-8">
-                        <h2 className="text-[#ebcfa7] md:text-5xl  text-7xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Luxury Residences</h2>
+                        <h2 className="text-[#ebcfa7] md:text-5xl  text-4xl text-start lg:text-6xl font-bold mb-2 sm:mb-4">Luxury Residences</h2>
                         <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">We build your dream house</p>
                         <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white shadow-sm hover:shadow-lg transition-all duration-200">  Get A Consultation</button>
                     </div>
@@ -61,7 +61,7 @@ const Slider = () => {
                 <SwiperSlide>
                     <img src={slider3} alt="" className="w-full  object-cover h-screen min-h-screen" />
                     <div className="bg-black bg-opacity-50  absolute inset-0 flex flex-col items-center justify-center text-white text-center p-4 sm:p-6 lg:p-8">
-                        <h2 className="text-[#ebcfa7] md:text-5xl  text-7xl text-start  lg:text-6xl font-bold mb-2 sm:mb-4">Premium Flats</h2>
+                        <h2 className="text-[#ebcfa7] md:text-5xl  text-4xl text-start  lg:text-6xl font-bold mb-2 sm:mb-4">Premium Flats</h2>
                         <p className="text-sm sm:text-base lg:text-lg mb-4 sm:mb-6">Living Spaces in Pecherska</p>
                         <button className="btn btn-outline border-2 border-[#ebcfa7] text-[#ebcfa7] hover:bg-[#ebcfa7] hover:text-white shadow-sm hover:shadow-lg transition-all duration-200"> Get A Consultation</button>
                     </div>
