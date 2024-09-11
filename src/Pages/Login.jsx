@@ -11,6 +11,8 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from "../firebase.config";
 
 
 const Login = () => {
@@ -42,6 +44,17 @@ const Login = () => {
             toast.error('Something went wrong');
         })
     }
+    const provider = new GoogleAuthProvider()
+    const handleGoogleSignIn = () =>{
+        signInWithPopup(auth, provider)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(error => {
+            console.log('error', error.message)
+        })
+    }
     return (
         <div>
             <Nav></Nav>
@@ -71,7 +84,7 @@ const Login = () => {
                         </div>
                        {/* direct image login system */}
                        <div className="flex gap-6 items-center justify-center lg:justify-start text-2xl">
-                       <IoLogoGoogle />
+                       <IoLogoGoogle onClick={handleGoogleSignIn} />
                        <IoLogoTwitter />
                        <FaGithub />
                        <FaFacebook />
